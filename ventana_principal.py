@@ -1,3 +1,4 @@
+import time
 import tkinter
 from tkinter import *
 from tkinter import Tk, Label, Button
@@ -52,7 +53,8 @@ def v1():
                          foreground="white",
                          font=estilo,
                          command=v2).place(x=580, y=500)
-    instruc = Button(v1, text="Intrucciones", background="#3498DB", foreground="white", command=v3, font=estilo)
+    instruc = Button(v1, text="Intrucciones", background="#3498DB",
+                     foreground="white", command=v3, font=estilo)
     instruc.place(x=1000, y=10)
     print("dd", boton_abrir)
 
@@ -76,7 +78,8 @@ def v3():
                 font=("Verdana", 10))
     ins.place(x=10, y=10)
     estilo = Font(family="Jetbrains mono", size=12)
-    exit = Button(v3, text="ok", background="red", foreground="white", font=estilo, width=10, command=v3.destroy)
+    exit = Button(v3, text="ok", background="red", foreground="white",
+                  font=estilo, width=10, command=v3.destroy)
     exit.place(x=516, y=300)
     wtotal = v3.winfo_screenwidth()
     htotal = v3.winfo_screenheight()
@@ -100,13 +103,16 @@ def v2():
     v2.resizable(0, 0)
     v2.config(bg="#F2F3F4")
     # estilo = Font(family="Jetbrainsmono 14 bold",size=14)
-    captura = Label(v2, text="Captura de voz", fg="#333", font=("Arial 14 bold"))
+    captura = Label(v2, text="Captura de voz",
+                    fg="#333", font=("Arial 14 bold"))
     captura.place(x=15, y=10)
 
-    captura1 = Label(v2, text="Texto de prueba", fg="#333", font=("Arial 14 bold"))
+    captura1 = Label(v2, text="Texto de prueba",
+                     fg="#333", font=("Arial 14 bold"))
     captura1.place(x=350, y=10)
 
-    cantidad_palabras = Label(v2, text="Cantidad de palabras leidas: ", font=("Arial 12 bold"), fg="#333", bg="#58D68D")
+    cantidad_palabras = Label(v2, text="Cantidad de palabras leidas: ", font=(
+        "Arial 12 bold"), fg="#333", bg="#58D68D")
     cantidad_palabras.place(x=350, y=450)
 
     texto_largo = "Los relatos de  grandes viajeros como Jenófanes, Herodoto o el propio Alejandro Magno" \
@@ -127,7 +133,8 @@ def v2():
                   "paradigmas sobre los que la sociedad y en especial los gobiernos han interrogado a la antropología, especialmente en situaciones " \
                   "relacionadas con la esclavitud, el abuso de poder,  la emancipación de la mujer"
 
-    txt_prueba = Text(v2, font=("Arial", 11), bg="#F8F9F9", fg="#333", relief=RIDGE, wrap=WORD, highlightcolor='green')
+    txt_prueba = Text(v2, font=("Arial", 11), bg="#F8F9F9",
+                      fg="#333", relief=RIDGE, wrap=WORD, highlightcolor='green')
     txt_prueba.place(x=350, y=39, width=710, height=400)
     txt_prueba.insert(tkinter.END, texto_largo)
     txt_prueba.config(spacing2=5)
@@ -153,6 +160,7 @@ def v2():
         v1.withdraw()
     engine = pyttsx3.init()
     # file_name = ("C:/Users/ADMIN/PycharmProjects/reconocer_voz/audio.wav")
+
     def voz_inicial():
         voices = engine.getProperty('voices')
         rate = engine.getProperty('rate')
@@ -215,9 +223,10 @@ def v2():
         # f.writelines(cp + "\n")
         # f.close()
         espera_res()
+        # time.sleep(1000)
         res = Text(v2, font=("Arial 12 bold"), fg="#333", bg="#58D68D")
         res.insert(tkinter.END, contar_palabras())
-        res.place(x=582, y=450, width=25, height=25)
+        res.place(x=582, y=450, width=40, height=25)
         resultado()
 
         # leer_archivo()
@@ -263,7 +272,6 @@ def v2():
     # time = Label(v2, fg='green', width=20, text="00:00:00", bg="black", font=("", "20"))
     # time.place(x=682, y=450)
 
-
     # contador1 += 1
 
     # def tiempo_audio():
@@ -287,7 +295,8 @@ def v2():
             print(rate)
             engine.setProperty('voice', voices[0].id)
             engine.setProperty('rate', 130)
-            engine.say("hablas lento, esto podria aburrir a tu receptor te sugiero hacer otra prueba !!!")
+            engine.say(
+                "hablas lento, esto podria aburrir a tu receptor te sugiero hacer otra prueba !!!")
             engine.runAndWait()
 
         elif (vh >= 2.08333333333 and vh <= 3.16666666667):
@@ -304,7 +313,8 @@ def v2():
             print(rate)
             engine.setProperty('voice', voices[0].id)
             engine.setProperty('rate', 130)
-            engine.say("sabias que hablas muy rapido, tu receptor no te puede entender haz otra prueba por favor!!!")
+            engine.say(
+                "sabias que hablas muy rapido, tu receptor no te puede entender haz otra prueba por favor!!!")
             engine.runAndWait()
         print(f"ppm-:{vh}")
 
@@ -333,10 +343,12 @@ def v2():
         txt_area.delete(1.0, END)
 
     estilo2 = Font(family="Arial", size=12)
-    txt_area = scrolledtext.ScrolledText(v2, font=estilo2, bg="white", fg="black", relief=GROOVE, wrap=WORD)
+    txt_area = scrolledtext.ScrolledText(
+        v2, font=estilo2, bg="white", fg="black", relief=GROOVE, wrap=WORD)
     txt_area.place(x=10, y=40, width=320, height=300)
 
-    boton_reset = Button(v2, text="reset", command=reset, bg="#34495E", fg="white", font=("Arial 12 bold"), width=10)
+    boton_reset = Button(v2, text="reset", command=reset,
+                         bg="#34495E", fg="white", font=("Arial 12 bold"), width=10)
     boton_reset.place(x=600, y=600)
 
     v2.mainloop()
@@ -347,6 +359,5 @@ def volver_ventana():
     v1.iconify()
     v1.deiconify()
     v2.destroy()
-
 
 v1()
