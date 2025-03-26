@@ -115,23 +115,11 @@ def v2():
         "Arial 12 bold"), fg="#333", bg="#58D68D")
     cantidad_palabras.place(x=350, y=450)
 
-    texto_largo = "Los relatos de  grandes viajeros como Jenófanes, Herodoto o el propio Alejandro Magno" \
-                  " junto con la mitología, la política, la biología y otras áreas del conocimiento" \
-                  "contribuyeron a la profunda reflexión sobre el origen del hombre, la sociedad y las diferencias " \
-                  "entre unos pueblos y otros Los sofistas trataron de dar una explicación práctica al surgimiento" \
-                  "de las sociedades, Sócrates y Platón propusieron la ética y los valores universales como explicación" \
-                  "a esos fenómenos comunes en todos los pueblos, Aristóteles apostó por la biología haciendo" \
-                  "de la sociedad y la cultura una carga inherente al ser humano. Epicúreos y estoicos centraron el origen" \
-                  "social en el individuo y en su necesidad de bienestar.De esta primera experiencia sobre el debate antropológico" \
-                  "podemos extraer una referencia  que va a marcar de manera  general la evolución" \
-                  "de los estudios sobre las sociedades y las culturas: al hombre le satisface pensar" \
-                  "sobre sí mismo y además este pensamiento es la clave que encamina a la resolución de" \
-                  "algunos problemas de convivencia. Con el redescubrimiento de Aristóteles en el siglo XII, aparece  el hombre como " \
-                  "ser dotado de razón, capaz de mejorar su propio destino y su condición social. Estas ideas crecieron en la obra de " \
-                  "Santo Tomás de Aquino, quien  llegó a la conclusión de que el hombre se situaba en un escalón inmediatamente inferior al " \
-                  "de los ángeles.  Sostuvo además la unidad psíquica del hombre,”por naturaleza todos los hombres son iguales“ otro de los " \
-                  "paradigmas sobre los que la sociedad y en especial los gobiernos han interrogado a la antropología, especialmente en situaciones " \
-                  "relacionadas con la esclavitud, el abuso de poder,  la emancipación de la mujer"
+    texto_largo = '''Los avances tecnológicos han transformado nuestras vidas de manera significativa. "
+                   "Desde la invención del teléfono móvil hasta la creación de la inteligencia artificial, "
+                   "las herramientas que utilizamos diariamente son cada vez más sofisticadas. Sin embargo, "
+                   "a pesar de estos avances, "
+                   "muchos problemas siguen siendo los mismos, como la pobreza, la desigualdad y la contaminación ambiental.'''
 
     txt_prueba = Text(v2, font=("Arial", 11), bg="#F8F9F9",
                       fg="#333", relief=RIDGE, wrap=WORD, highlightcolor='green')
