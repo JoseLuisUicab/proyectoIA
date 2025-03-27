@@ -5,7 +5,7 @@ from tkinter import Tk, Label, Button
 from tkinter import messagebox as mb
 from tkinter import scrolledtext
 from tkinter.font import Font
-
+import pyaudio
 import pyttsx3
 import speech_recognition as sr
 
