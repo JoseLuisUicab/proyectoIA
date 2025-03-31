@@ -22,11 +22,11 @@ def v1():
     label = Label(image=img).place(x=20, y=60)
     estilofuente = Font(family="Fredoka One", size=35)
     estilo = Font(family="Jetbrains mono", size=14)
-    label = Label(text="Puedes hablar mas no ", font=estilofuente,
+    label = Label(text="Proyecto de IA ", font=estilofuente,
                   fg="black", bg="white").place(x=570, y=120)
-    label = Label(text="comunicar", font=estilofuente,
+    label = Label(text="TEC Merida", font=estilofuente,
                   fg="black", bg="white").place(x=570, y=185)
-    label = Label(text="!!Aprendamos a Comunicar", font=estilofuente,
+    label = Label(text="Hiperlexia", font=estilofuente,
                   fg="red", bg="white").place(x=570, y=250)
 
     wtotal = v1.winfo_screenwidth()
